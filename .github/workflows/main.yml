@@ -24,17 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.1
+      - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-          node-version: 16.x
-
-      - name: Install pnpm
-        run: npm i pnpm -g
-
-      - name: Install
-        run: pnpm i
-        
-      - name: Deploy docs
-        run: npm run deploy
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
