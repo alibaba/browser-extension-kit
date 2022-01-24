@@ -1,0 +1,83 @@
+{
+  "name": "browser-extension-kit",
+  "version": "1.0.0",
+  "description": "A JavaScript library for building Chrome extensions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "build:lib": "rimraf dist && tsc && node ./post-build.js",
+    "start:doc": "gatsby develop",
+    "build:doc": "gatsby build",
+    "serve": "gatsby serve",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public pages images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba/browser-extension-kit"
+  },
+  "files": [
+    "dist",
+    "background",
+    "popup",
+    "devtools",
+    "content-script",
+    "page-script",
+    "src",
+    "package.json"
+  ],
+  "keywords": [
+    "chrome",
+    "extension",
+    "firefox",
+    "safari",
+    "edge",
+    "message",
+    "port"
+  ],
+  "author": "mhcgrq",
+  "devDependencies": {
+    "@types/chrome": "^0.0.176",
+    "@types/lodash": "^4.14.178",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/serialize-javascript": "^5.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "fs-extra": "^10.0.0",
+    "gatsby": "^4.5.4",
+    "gatsby-plugin-i18n": "^1.0.1",
+    "gatsby-plugin-pnpm": "^1.2.10",
+    "gh-pages": "^3.2.3",
+    "lint-staged": "^12.3.1",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "smooth-doc": "^8.1.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "lodash": "^4.17.21",
+    "rxjs": "^7.5.2",
+    "serialize-error": "^8.1.0",
+    "serialize-javascript": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0 || 17.x",
+    "react-dom": ">=16.8.0 || 17.x"
+  },
+  "license": "MIT"
+}

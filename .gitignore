@@ -1,0 +1,27 @@
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+stats.json
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+.atom
+
+dist
+background
+popup
+devtools
+content-script
+page-script
+
+.cache
+images
+pages
+public
+!docs/*
+!src/*
+
+.vscode

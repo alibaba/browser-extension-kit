@@ -1,0 +1,29 @@
+import {
+  ScreenContainer,
+  Button,
+  HeroSection,
+  Hero,
+  HeroBody,
+  HeroTitle,
+  HeroTeaser,
+  HeroActionList,
+  HeroAction,
+} from 'smooth-doc/components';
+import { Link } from 'gatsby';
+import heroBackgroundImageURL from '../images/hero-background.png';
+
+<HeroSection>
+  <Hero backgroundImageURL={heroBackgroundImageURL}>
+    <HeroBody>
+      <HeroTitle>browser-extension-kit</HeroTitle>
+      <HeroTeaser>一个开发 Chrome 插件的框架</HeroTeaser>
+      <HeroActionList>
+        <HeroAction>
+          <Button variant="neutral" as={Link} to="/docs/zh-cn">
+            查看文档
+          </Button>
+        </HeroAction>
+      </HeroActionList>
+    </HeroBody>
+  </Hero>
+</HeroSection>
